@@ -1,7 +1,5 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 import { greet } from "./app.js";
-import { fileURLToPath } from "node:url";
-import { resolve } from "node:path";
 import { createRequire } from "node:module";
 
 export function parseArgs(argv = process.argv.slice(2)) {
