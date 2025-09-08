@@ -27,3 +27,24 @@ npm i -D eslint@latest prettier@latest eslint-config-prettier@latest
 - `src/` código fuente (ESM)
 - `tests/` pruebas (node:test)
 - `scripts/` scripts PowerShell para dev/test/build
+
+## Uso (CLI)
+
+Puedes usar el CLI publicado del paquete sin instalarlo globalmente:
+
+```
+npx anton-greet Antonio --shout
+```
+
+Para desarrollo local, crea un enlace global y usa el comando:
+
+```
+npm link
+anton-greet -h
+```
+
+También puedes ejecutarlo directamente con Node:
+
+```
+node src/index.js [name]
+```
