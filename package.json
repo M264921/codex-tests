@@ -53,7 +53,11 @@
   },
   "homepage": "https://github.com/M264921/codex-tests#readme",
   "description": "Tiny greeting CLI with --shout",
-  "files": "[src/*.js,LICENSE,README.md]",
+  "files": [
+    "src/*.js",
+    "LICENSE",
+    "README.md"
+  ],
   "publishConfig": {
     "access": "public"
   }
