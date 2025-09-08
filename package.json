@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "main": "src/index.js",
+  "bin": {
+    "anton-greet": "src/index.js"
+  },
   "scripts": {
     "dev": "node src/index.js",
     "build": "node -e \"console.log('No build step yet')\"",
