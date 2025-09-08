@@ -1,7 +1,7 @@
 {
-  "name": "codex-tests",
+  "name": "anton-greet",
   "version": "0.1.0",
-  "private": true,
+  "private": "false",
   "type": "module",
   "main": "src/index.js",
   "bin": {
@@ -46,10 +46,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/M264921/codex-tests.git"
+    "url": "git+https://github.com/M264921/codex-tests.git"
   },
   "bugs": {
     "url": "https://github.com/M264921/codex-tests/issues"
   },
-  "homepage": "https://github.com/M264921/codex-tests#readme"
+  "homepage": "https://github.com/M264921/codex-tests#readme",
+  "description": "Tiny greeting CLI with --shout",
+  "files": "[src/*.js,LICENSE,README.md]",
+  "publishConfig": {
+    "access": "public"
+  }
 }
