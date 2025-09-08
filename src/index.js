@@ -1,10 +1,23 @@
 import { greet } from "./app.js";
 import { fileURLToPath } from "node:url";
 
+export function parseArgs(argv = process.argv.slice(2)) {
+  let shout = false;
+  let name = "";
+  for (const arg of argv) {
+    if (arg === "--shout") {
+      shout = true;
+    } else if (!arg.startsWith("-") && name === "") {
+      name = arg;
+    }
+  }
+  return { name, shout };
+}
+
 function main() {
-  const [, , ...args] = process.argv;
-  const name = args[0] ?? "";
-  const message = greet(name);
+  const { name, shout } = parseArgs();
+  let message = greet(name);
+  if (shout) message = message.toUpperCase();
   console.log(message);
 }
 

@@ -27,3 +27,14 @@ test("CLI prints greeting with name arg", async () => {
   const { stdout } = await runCli(["Antonio"]);
   assert.equal(stdout, "Hello, Antonio!");
 });
+
+test("CLI supports --shout flag (any position)", async () => {
+  const a = await runCli(["--shout"]);
+  assert.equal(a.stdout, "HELLO!");
+
+  const b = await runCli(["--shout", "Antonio"]);
+  assert.equal(b.stdout, "HELLO, ANTONIO!");
+
+  const c = await runCli(["Antonio", "--shout"]);
+  assert.equal(c.stdout, "HELLO, ANTONIO!");
+});
